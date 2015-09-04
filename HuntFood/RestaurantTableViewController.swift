@@ -42,7 +42,7 @@ class RestaurantTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("RestraurantCell", forIndexPath: indexPath) as! UITableViewCell
 
         cell.textLabel?.text = restaurantNames[indexPath.row]
-
+        cell.imageView?.image = UIImage(named: "avarats_\(indexPath.row)")
         return cell
     }
 
