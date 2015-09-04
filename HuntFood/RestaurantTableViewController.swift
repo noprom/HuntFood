@@ -66,9 +66,16 @@ class RestaurantTableViewController: UITableViewController {
             alertMessage.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alertMessage, animated: true, completion: nil)
         }
+        // 是否到过
+        let isVisitedAction = UIAlertAction(title: "我已经到过这里了", style: UIAlertActionStyle.Default) { (action: UIAlertAction!) -> Void in
+            let cell = tableView.cellForRowAtIndexPath(indexPath)
+            cell?.accessoryType = UITableViewCellAccessoryType.Checkmark
+        }
         optionMenu.addAction(cancelAction)
         optionMenu.addAction(callAction)
+        optionMenu.addAction(isVisitedAction)
         self.presentViewController(optionMenu, animated: true, completion: nil)
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     /*
