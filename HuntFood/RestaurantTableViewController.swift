@@ -17,6 +17,8 @@ class RestaurantTableViewController: UITableViewController {
     
     var restaurantTypes = ["Coffee & Tea Shop", "Cafe", "Tea House", "Austrian / Causual Drink", "French", "Bakery", "Bakery", "Chocolate", "Cafe", "American / Seafood", "American", "American", "Breakfast & Brunch", "Coffee & Tea", "Coffee & Tea", "Latin American", "Spanish", "Spanish", "Spanish", "British", "Thai"]
     
+    var restaurantIsVisited = [Bool](count: 21, repeatedValue: false)
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -52,6 +54,8 @@ class RestaurantTableViewController: UITableViewController {
         cell.thumbnailImageView.clipsToBounds = true
         cell.locationLabel.text = restaurantLocations[indexPath.row]
         cell.typeLabel.text = restaurantTypes[indexPath.row]
+        // 设置是否访问
+        cell.accessoryType = restaurantIsVisited[indexPath.row] ? .Checkmark : .None
         return cell
     }
 
@@ -70,6 +74,7 @@ class RestaurantTableViewController: UITableViewController {
         let isVisitedAction = UIAlertAction(title: "我已经到过这里了", style: UIAlertActionStyle.Default) { (action: UIAlertAction!) -> Void in
             let cell = tableView.cellForRowAtIndexPath(indexPath)
             cell?.accessoryType = UITableViewCellAccessoryType.Checkmark
+            self.restaurantIsVisited[indexPath.row] = true
         }
         optionMenu.addAction(cancelAction)
         optionMenu.addAction(callAction)
