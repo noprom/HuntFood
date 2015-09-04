@@ -56,9 +56,18 @@ class RestaurantTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        // 弹出菜单
         let optionMenu = UIAlertController(title: nil, message: "What do you want?", preferredStyle: UIAlertControllerStyle.ActionSheet)
+        // 取消
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
+        // 打电话
+        let callAction = UIAlertAction(title: "Call " + "123-000-\(indexPath.row)", style: UIAlertActionStyle.Default) { (action: UIAlertAction!) -> Void in
+            let alertMessage = UIAlertController(title: "暂时不提供服务", message: "不好意思，暂时不提供服务", preferredStyle: UIAlertControllerStyle.Alert)
+            alertMessage.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alertMessage, animated: true, completion: nil)
+        }
         optionMenu.addAction(cancelAction)
+        optionMenu.addAction(callAction)
         self.presentViewController(optionMenu, animated: true, completion: nil)
     }
     
