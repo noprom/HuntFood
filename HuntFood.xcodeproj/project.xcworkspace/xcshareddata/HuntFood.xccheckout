@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>916D8C77-90ED-4B3F-B2EE-7762247024F5</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>HuntFood</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>EECA7EA7FFF11A367F8779F63D774CD845780D53</key>
 		<string>github.com:noprom/HuntFood.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>HuntFood.xcodeproj/project.xcworkspace</string>
+	<string>HuntFood.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>EECA7EA7FFF11A367F8779F63D774CD845780D53</key>
