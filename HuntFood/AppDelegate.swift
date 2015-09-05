@@ -21,7 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let barFont = UIFont(name: "AvenirNextCondensed-DemiBold", size: 22.0) {
             UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor(),NSFontAttributeName:barFont]
         }
-
+        // 设置运营商等字体的颜色
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         return true
     }
 
