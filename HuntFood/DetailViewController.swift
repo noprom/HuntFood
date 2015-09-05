@@ -9,10 +9,10 @@
 import UIKit
 
 class DetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
     var restaurant: Restaurant!
     @IBOutlet var restaurantImageView:UIImageView!
     @IBOutlet var tableView:UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.restaurantImageView.image = UIImage(named: restaurant.image)
