@@ -114,6 +114,11 @@ class RestaurantTableViewController: UITableViewController {
             self.restaurantIsVisited.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }
+        // 设置按钮背景颜色
+        shareAction.backgroundColor = UIColor(red: 255.0/255.0, green: 166.0/255.0, blue:
+                51.0/255.0, alpha: 1.0)
+        deleteAction.backgroundColor = UIColor(red: 51.0/255.0, green: 51.0/255.0, blue:
+                51.0/255.0, alpha: 1.0)
         return [deleteAction, shareAction]
     }
 
