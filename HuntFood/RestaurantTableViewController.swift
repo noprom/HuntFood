@@ -10,17 +10,44 @@ import UIKit
 
 class RestaurantTableViewController: UITableViewController {
 
+    var restaurants:[Restaurant] = [
+        Restaurant(name: "Cafe Deadend", type: "Coffee & Tea Shop", location: "Hong Kong",
+        image: "avarats_0.jpg", isVisited: false),
+        Restaurant(name: "Homei", type: "Cafe", location: "Hong Kong", image: "avarats_1.jpg",
+        isVisited: false),
+        Restaurant(name: "Teakha", type: "Tea House", location: "Hong Kong", image:
+        "avarats_2.jpg", isVisited: false),
+        Restaurant(name: "Cafe loisl", type: "Austrian / Causual Drink", location: "Hong Kong",
+        image: "avarats_3.jpg", isVisited: false),
+        Restaurant(name: "Petite Oyster", type: "French", location: "Hong Kong", image:
+        "avarats_4.jpg", isVisited: false),
+        Restaurant(name: "For Kee Restaurant", type: "Bakery", location: "Hong Kong", image:
+        "avarats_5.jpg", isVisited: false),
+        Restaurant(name: "Po's Atelier", type: "Bakery", location: "Hong Kong", image:
+        "avarats_6.jpg", isVisited: false),
+        Restaurant(name: "Bourke Street Backery", type: "Chocolate", location: "Sydney", image:
+        "avarats_7.jpg", isVisited: false),
+        Restaurant(name: "Haigh's Chocolate", type: "Cafe", location: "Sydney", image:
+        "avarats_8.jpg", isVisited: false),
+        Restaurant(name: "Palomino Espresso", type: "American / Seafood", location: "Sydney",
+        image: "avarats_9.jpg", isVisited: false),
+        Restaurant(name: "Upstate", type: "American", location: "New York", image:
+        "avarats_10.jpg", isVisited: false),
+        Restaurant(name: "Traif", type: "American", location: "New York", image: "traif.jpg",
+        isVisited: false),
+        Restaurant(name: "Graham Avenue Meats", type: "Breakfast & Brunch", location: "New York", image: "avarats_11.jpg", isVisited: false),
+        Restaurant(name: "Waffle & Wolf", type: "Coffee & Tea", location: "New York", image: "avarats_12.jpg", isVisited: false),
+        Restaurant(name: "Five Leaves", type: "Coffee & Tea", location: "New York", image: "avarats_13.jpg", isVisited: false),
+        Restaurant(name: "Cafe Lore", type: "Latin American", location: "New York", image: "avarats_14.png", isVisited: false),
+        Restaurant(name: "Confessional", type: "Spanish", location: "New York", image:
+        "avarats_15.png", isVisited: false),
+        Restaurant(name: "Barrafina", type: "Spanish", location: "London", image:  "avarats_16.png", isVisited: false),
+        Restaurant(name: "Donostia", type: "Spanish", location: "London", image: "avarats_17.png", isVisited: false),
+        Restaurant(name: "Royal Oak", type: "British", location: "London", image:
+        "avarats_18.png", isVisited: false),
+        Restaurant(name: "Thai Cafe", type: "Thai", location: "London", image: "avarats_19.png", isVisited: false)
+        ]
     
-    var restaurantNames = ["Cafe Deadend", "Homei", "Teakha", "Cafe Loisl", "Petite Oyster", "ForKee Restaurant", "Po's Atelier", "Bourke Street Bakery", "Haigh's Chocolate", "Palomino Espresso", "Upstate", "Traif", "Graham Avenue Meats", "Waffle & Wolf", "Five Leaves", "Cafe Lore", "Confessional", "Barrafina", "Donostia", "Royal Oak", "Thai Cafe"]
-    
-    var restaurantLocations = ["Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong", "Sydney", "Sydney", "Sydney", "New York", "New York", "New York", "New York", "New York", "New York", "New York", "London", "London", "London", "London"]
-    
-    var restaurantTypes = ["Coffee & Tea Shop", "Cafe", "Tea House", "Austrian / Causual Drink", "French", "Bakery", "Bakery", "Chocolate", "Cafe", "American / Seafood", "American", "American", "Breakfast & Brunch", "Coffee & Tea", "Coffee & Tea", "Latin American", "Spanish", "Spanish", "Spanish", "British", "Thai"]
-    
-    var restaurantImages = ["avarats_0.jpg", "avarats_1.jpg", "avarats_2.jpg", "avarats_3.jpg", "avarats_4.jpg", "avarats_5.jpg", "avarats_6.jpg", "avarats_7.jpg","avarats_8.jpg", "avarats_9.jpg", "avarats_10.jpg", "avarats_11.jpg", "avarats_12.jpg", "avarats_13.jpg", "avarats_14.png", "avarats_15.png", "avarats_16.png", "avarats_17.png", "avarats_18.png", "avarats_19.png", "avarats_20.png", "avarats_21.png", "avarats_22.png", "avarats_23.png","avarats_24.png", "avarats_25.png", "avarats_26.png", "avarats_27.png", "avarats_28.png", "avarats_29.png", "avarats_30.png", "avarats_31.png", "avarats_32.png"]
-    
-    var restaurantIsVisited = [Bool](count: 21, repeatedValue: false)
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,21 +70,23 @@ class RestaurantTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return restaurantNames.count
+        return self.restaurants.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("RestraurantCell", forIndexPath: indexPath) as! RestaurantTableViewCell
-
-        cell.nameLabel.text = restaurantNames[indexPath.row]
-        cell.thumbnailImageView?.image = UIImage(named: restaurantImages[indexPath.row])
+        
+        let restaurant = restaurants[indexPath.row]
+        cell.nameLabel.text = restaurant.name
+        cell.thumbnailImageView?.image = UIImage(named: restaurant.image)
         // 设置圆角
         cell.thumbnailImageView.layer.cornerRadius = cell.thumbnailImageView.frame.width / 2
         cell.thumbnailImageView.clipsToBounds = true
-        cell.locationLabel.text = restaurantLocations[indexPath.row]
-        cell.typeLabel.text = restaurantTypes[indexPath.row]
+        cell.locationLabel.text = restaurant.location
+        cell.typeLabel.text = restaurant.type
+        
         // 设置是否访问
-        cell.accessoryType = restaurantIsVisited[indexPath.row] ? .Checkmark : .None
+        cell.accessoryType = self.restaurants[indexPath.row].isVisited ? .Checkmark : .None
         return cell
     }
 
@@ -110,10 +139,7 @@ class RestaurantTableViewController: UITableViewController {
         
         // 删除
         var deleteAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Delete") { (action: UITableViewRowAction!, indexPath: NSIndexPath!) -> Void in
-            self.restaurantNames.removeAtIndex(indexPath.row)
-            self.restaurantLocations.removeAtIndex(indexPath.row)
-            self.restaurantTypes.removeAtIndex(indexPath.row)
-            self.restaurantIsVisited.removeAtIndex(indexPath.row)
+            self.restaurants.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }
         // 设置按钮背景颜色
@@ -127,12 +153,8 @@ class RestaurantTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            // Delete the row from the data source
-            self.restaurantNames.removeAtIndex(indexPath.row)
-            self.restaurantLocations.removeAtIndex(indexPath.row)
-            self.restaurantTypes.removeAtIndex(indexPath.row)
-            self.restaurantIsVisited.removeAtIndex(indexPath.row)
-//            self.tableView.reloadData()
+            // Delete the row from the data source                        
+            self.restaurants.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -162,7 +184,7 @@ class RestaurantTableViewController: UITableViewController {
         if segue.identifier == "showRestaurantDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow() {
                 let destinationController = segue.destinationViewController as? DetailViewController
-                destinationController?.restaurantImage = self.restaurantImages[indexPath.row]
+                destinationController?.restaurantImage = self.restaurants[indexPath.row].image
             }
         }
     }
