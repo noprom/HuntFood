@@ -52,7 +52,7 @@
                                     <outlet property="nameLabel" destination="Vhl-Mq-guD" id="fdP-Le-txP"/>
                                     <outlet property="thumbnailImageView" destination="1t1-U7-sE8" id="nqd-f8-IQS"/>
                                     <outlet property="typeLabel" destination="4XH-fc-igG" id="cbf-GY-TCv"/>
-                                    <segue destination="wSm-a3-SqF" kind="push" id="VVH-ck-VAM"/>
+                                    <segue destination="wSm-a3-SqF" kind="push" identifier="showRestaurantDetail" id="VVH-ck-VAM"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -86,6 +86,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Jce-Yd-u3X"/>
+                    <connections>
+                        <outlet property="restaurantImageView" destination="h51-ye-iGw" id="e0h-UZ-tEf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IvK-47-xSR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
