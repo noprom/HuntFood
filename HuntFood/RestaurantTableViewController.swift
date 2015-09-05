@@ -45,8 +45,8 @@ class RestaurantTableViewController: UITableViewController {
         // 设置返回按钮
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
         // 设置自动换行
-//        tableView.estimatedRowHeight = 80.0
-//        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 80.0
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     override func viewWillAppear(animated: Bool) {
