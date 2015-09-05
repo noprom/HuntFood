@@ -83,7 +83,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="S0q-hH-xLJ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="S0q-hH-xLJ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <imageView key="tableHeaderView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="h51-ye-iGw">
@@ -123,10 +123,17 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="S0q-hH-xLJ" firstAttribute="top" secondItem="eq4-pU-k7U" secondAttribute="top" id="Lgp-09-VHB"/>
+                            <constraint firstItem="1iO-vm-A12" firstAttribute="top" secondItem="S0q-hH-xLJ" secondAttribute="bottom" id="UaZ-kc-eK5"/>
+                            <constraint firstAttribute="trailing" secondItem="S0q-hH-xLJ" secondAttribute="trailing" id="lrR-hg-Aqh"/>
+                            <constraint firstItem="S0q-hH-xLJ" firstAttribute="leading" secondItem="eq4-pU-k7U" secondAttribute="leading" id="veH-as-2cX"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Jce-Yd-u3X"/>
                     <connections>
                         <outlet property="restaurantImageView" destination="h51-ye-iGw" id="e0h-UZ-tEf"/>
+                        <outlet property="tableView" destination="S0q-hH-xLJ" id="Jfg-sm-daj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IvK-47-xSR" userLabel="First Responder" sceneMemberID="firstResponder"/>
