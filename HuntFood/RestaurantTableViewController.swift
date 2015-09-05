@@ -90,7 +90,32 @@ class RestaurantTableViewController: UITableViewController {
 //        return true
 //    }
 
-
+    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]? {
+        // 分享
+        var shareAction = UITableViewRowAction(style: UITableViewRowActionStyle.Normal, title: "分享") { (action: UITableViewRowAction!, indexPath: NSIndexPath!) -> Void in
+            let shareMenu = UIAlertController(title: nil, message: "分享", preferredStyle: UIAlertControllerStyle.ActionSheet)
+            let tweetAction = UIAlertAction(title: "Twitter", style: UIAlertActionStyle.Default, handler: nil)
+            let facebookAction = UIAlertAction(title: "Facebook", style: UIAlertActionStyle.Default, handler: nil)
+            let emailAction = UIAlertAction(title: "Email", style: UIAlertActionStyle.Default, handler: nil)
+            let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
+            
+            shareMenu.addAction(tweetAction)
+            shareMenu.addAction(facebookAction)
+            shareMenu.addAction(emailAction)
+            shareMenu.addAction(cancelAction)
+            self.presentViewController(shareMenu, animated: true, completion: nil)
+        }
+        
+        // 删除
+        var deleteAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Delete") { (action: UITableViewRowAction!, indexPath: NSIndexPath!) -> Void in
+            self.restaurantNames.removeAtIndex(indexPath.row)
+            self.restaurantLocations.removeAtIndex(indexPath.row)
+            self.restaurantTypes.removeAtIndex(indexPath.row)
+            self.restaurantIsVisited.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
+        return [deleteAction, shareAction]
+    }
 
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
