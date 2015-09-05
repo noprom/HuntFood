@@ -17,6 +17,8 @@ class RestaurantTableViewController: UITableViewController {
     
     var restaurantTypes = ["Coffee & Tea Shop", "Cafe", "Tea House", "Austrian / Causual Drink", "French", "Bakery", "Bakery", "Chocolate", "Cafe", "American / Seafood", "American", "American", "Breakfast & Brunch", "Coffee & Tea", "Coffee & Tea", "Latin American", "Spanish", "Spanish", "Spanish", "British", "Thai"]
     
+    var restaurantImages = ["avarats_0.jpg", "avarats_1.jpg", "avarats_2.jpg", "avarats_3.jpg", "avarats_4.jpg", "avarats_5.jpg", "avarats_6.jpg", "avarats_7.jpg","avarats_8.jpg", "avarats_9.jpg", "avarats_10.jpg", "avarats_11.jpg", "avarats_12.jpg", "avarats_13.jpg", "avarats_14.png", "avarats_15.png", "avarats_16.png", "avarats_17.png", "avarats_18.png", "avarats_19.png", "avarats_20.png", "avarats_21.png", "avarats_22.png", "avarats_23.png","avarats_24.png", "avarats_25.png", "avarats_26.png", "avarats_27.png", "avarats_28.png", "avarats_29.png", "avarats_30.png", "avarats_31.png", "avarats_32.png"]
+    
     var restaurantIsVisited = [Bool](count: 21, repeatedValue: false)
 
     override func viewDidLoad() {
@@ -48,7 +50,7 @@ class RestaurantTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("RestraurantCell", forIndexPath: indexPath) as! RestaurantTableViewCell
 
         cell.nameLabel.text = restaurantNames[indexPath.row]
-        cell.thumbnailImageView?.image = UIImage(named: "avarats_\(indexPath.row)")
+        cell.thumbnailImageView?.image = UIImage(named: restaurantImages[indexPath.row])
         // 设置圆角
         cell.thumbnailImageView.layer.cornerRadius = cell.thumbnailImageView.frame.width / 2
         cell.thumbnailImageView.clipsToBounds = true

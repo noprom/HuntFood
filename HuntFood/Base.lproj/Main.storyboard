@@ -67,10 +67,10 @@
             </objects>
             <point key="canvasLocation" x="689" y="169"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="QSZ-hi-Zom">
             <objects>
-                <viewController id="wSm-a3-SqF" sceneMemberID="viewController">
+                <viewController id="wSm-a3-SqF" customClass="DetailViewController" customModule="HuntFood" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Q7p-Y8-Mpb"/>
                         <viewControllerLayoutGuide type="bottom" id="1iO-vm-A12"/>
