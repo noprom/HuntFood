@@ -150,11 +150,27 @@
                                     <outlet property="delegate" destination="wSm-a3-SqF" id="ogz-zg-WYx"/>
                                 </connections>
                             </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3eW-lH-GXk">
+                                <rect key="frame" x="0.0" y="524" width="524" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="524" id="rDS-9n-bJb"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="action" id="Tpg-Vw-VBJ">
+                                        <inset key="imageInsets" minX="171" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="compose" id="XYQ-Qe-qCW">
+                                        <inset key="imageInsets" minX="300" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="1iO-vm-A12" firstAttribute="top" secondItem="3eW-lH-GXk" secondAttribute="bottom" id="BW4-Yv-aqy"/>
                             <constraint firstItem="S0q-hH-xLJ" firstAttribute="top" secondItem="eq4-pU-k7U" secondAttribute="top" id="Lgp-09-VHB"/>
                             <constraint firstItem="1iO-vm-A12" firstAttribute="top" secondItem="S0q-hH-xLJ" secondAttribute="bottom" id="UaZ-kc-eK5"/>
+                            <constraint firstItem="3eW-lH-GXk" firstAttribute="leading" secondItem="eq4-pU-k7U" secondAttribute="leading" id="eza-XG-zNn"/>
                             <constraint firstAttribute="trailing" secondItem="S0q-hH-xLJ" secondAttribute="trailing" id="lrR-hg-Aqh"/>
                             <constraint firstItem="S0q-hH-xLJ" firstAttribute="leading" secondItem="eq4-pU-k7U" secondAttribute="leading" id="veH-as-2cX"/>
                         </constraints>
