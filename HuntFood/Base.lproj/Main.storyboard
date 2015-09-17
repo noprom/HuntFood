@@ -164,6 +164,9 @@
                                     </barButtonItem>
                                     <barButtonItem systemItem="compose" id="XYQ-Qe-qCW">
                                         <inset key="imageInsets" minX="300" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <segue destination="ZNc-aL-66H" kind="modal" identifier="showReview" id="1nf-0B-o8b"/>
+                                        </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
@@ -212,32 +215,31 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPw-IR-dEN" userLabel="bad">
-                                        <rect key="frame" x="40" y="179" width="46" height="30"/>
-                                        <state key="normal" title="Bad">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPw-IR-dEN" userLabel="bad">
+                                        <rect key="frame" x="40" y="179" width="50" height="50"/>
+                                        <state key="normal" image="dislike">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTG-k6-vnJ" userLabel="good">
-                                        <rect key="frame" x="92" y="179" width="46" height="30"/>
-                                        <state key="normal" title="Good">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTG-k6-vnJ" userLabel="good">
+                                        <rect key="frame" x="92" y="179" width="50" height="50"/>
+                                        <state key="normal" image="like">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNB-pK-tIf" userLabel="great">
-                                        <rect key="frame" x="150" y="179" width="46" height="30"/>
-                                        <state key="normal" title="Great">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNB-pK-tIf" userLabel="great">
+                                        <rect key="frame" x="150" y="179" width="50" height="50"/>
+                                        <state key="normal" image="great">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                 </subviews>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoL-X1-YBO" userLabel="Close">
-                                <rect key="frame" x="258" y="20" width="46" height="30"/>
-                                <state key="normal" title="Close">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoL-X1-YBO" userLabel="Close">
+                                <rect key="frame" x="258" y="20" width="50" height="50"/>
+                                <state key="normal" image="close">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -271,6 +273,10 @@
     </scenes>
     <resources>
         <image name="avarats_10" width="327" height="333"/>
+        <image name="close" width="50" height="50"/>
+        <image name="dislike" width="50" height="50"/>
+        <image name="great" width="50" height="50"/>
+        <image name="like" width="50" height="50"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
