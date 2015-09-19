@@ -14,6 +14,7 @@
 		80467B2B1B99942A00B45B9A /* HuntFoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80467B2A1B99942A00B45B9A /* HuntFoodTests.swift */; };
 		80467B351B99959000B45B9A /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80467B341B99959000B45B9A /* RestaurantTableViewController.swift */; };
 		80467B371B99E01700B45B9A /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80467B361B99E01700B45B9A /* RestaurantTableViewCell.swift */; };
+		809FC7991BADB62600315F24 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809FC7981BADB62600315F24 /* ReviewViewController.swift */; };
 		80FD70571B9AC37600D0634E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FD70561B9AC37600D0634E /* DetailViewController.swift */; };
 		80FD70591B9ACACB00D0634E /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FD70581B9ACACB00D0634E /* Restaurant.swift */; };
 		80FD705D1B9AD1FF00D0634E /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FD705C1B9AD1FF00D0634E /* DetailTableViewCell.swift */; };
@@ -41,6 +42,7 @@
 		80467B2A1B99942A00B45B9A /* HuntFoodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuntFoodTests.swift; sourceTree = "<group>"; };
 		80467B341B99959000B45B9A /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		80467B361B99E01700B45B9A /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		809FC7981BADB62600315F24 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		80FD70561B9AC37600D0634E /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		80FD70581B9ACACB00D0634E /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		80FD705C1B9AD1FF00D0634E /* DetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				80467B141B99942A00B45B9A /* AppDelegate.swift */,
 				80467B341B99959000B45B9A /* RestaurantTableViewController.swift */,
 				80FD70561B9AC37600D0634E /* DetailViewController.swift */,
+				809FC7981BADB62600315F24 /* ReviewViewController.swift */,
 				80467B361B99E01700B45B9A /* RestaurantTableViewCell.swift */,
 				80FD705C1B9AD1FF00D0634E /* DetailTableViewCell.swift */,
 				80FD70581B9ACACB00D0634E /* Restaurant.swift */,
@@ -227,6 +230,7 @@
 			files = (
 				80FD705D1B9AD1FF00D0634E /* DetailTableViewCell.swift in Sources */,
 				80FD70591B9ACACB00D0634E /* Restaurant.swift in Sources */,
+				809FC7991BADB62600315F24 /* ReviewViewController.swift in Sources */,
 				80467B351B99959000B45B9A /* RestaurantTableViewController.swift in Sources */,
 				80467B371B99E01700B45B9A /* RestaurantTableViewCell.swift in Sources */,
 				80467B151B99942A00B45B9A /* AppDelegate.swift in Sources */,

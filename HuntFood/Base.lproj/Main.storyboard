@@ -191,10 +191,10 @@
             </objects>
             <point key="canvasLocation" x="1107" y="165"/>
         </scene>
-        <!--View Controller-->
+        <!--Review View Controller-->
         <scene sceneID="FS7-JV-uUI">
             <objects>
-                <viewController id="ZNc-aL-66H" sceneMemberID="viewController">
+                <viewController id="ZNc-aL-66H" customClass="ReviewViewController" customModule="HuntFood" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5j4-JO-40b"/>
                         <viewControllerLayoutGuide type="bottom" id="nc7-zC-hT9"/>
@@ -203,7 +203,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avarats_10" translatesAutoresizingMaskIntoConstraints="NO" id="64V-s9-hxg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avarats_10" translatesAutoresizingMaskIntoConstraints="NO" id="64V-s9-hxg" userLabel="bg">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7MH-V3-Usx">
@@ -273,6 +273,9 @@
                             <constraint firstAttribute="trailing" secondItem="64V-s9-hxg" secondAttribute="trailing" id="vNP-at-gHP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="64V-s9-hxg" id="2Ht-iy-YSf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="96h-Cc-snB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="JlG-tA-24L" userLabel="Exit" sceneMemberID="exit"/>
