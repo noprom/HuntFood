@@ -13,6 +13,11 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet var restaurantImageView:UIImageView!
     @IBOutlet var tableView:UITableView!
     
+    /// 回到该界面的返回方法
+    @IBAction func close(segue:UIStoryboardSegue) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.restaurantImageView.image = UIImage(named: restaurant.image)
