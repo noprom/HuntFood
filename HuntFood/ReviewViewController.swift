@@ -11,6 +11,7 @@ import UIKit
 class ReviewViewController: UIViewController {
 
     @IBOutlet weak var backgroundImageView:UIImageView!
+    @IBOutlet weak var dialogView:UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +21,18 @@ class ReviewViewController: UIViewController {
         var blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = view.bounds
         backgroundImageView.addSubview(blurEffectView)
+        
+        //初始化为点评框增加渐变效果
+        dialogView.transform = CGAffineTransformMakeScale(0.0, 0.0)
     }
 
+    override func viewWillAppear(animated: Bool) {
+        //为点评框增加渐变效果
+        UIView.animateWithDuration(0.7, delay: 0.0, options: nil, animations: {
+            self.dialogView.transform = CGAffineTransformMakeScale(1, 1)
+        }, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
