@@ -17,8 +17,8 @@ class ReviewViewController: UIViewController {
         super.viewDidLoad()
 
         //为背景图片增加模糊效果
-        var blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
-        var blurEffectView = UIVisualEffectView(effect: blurEffect)
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = view.bounds
         backgroundImageView.addSubview(blurEffectView)
         
@@ -41,12 +41,12 @@ class ReviewViewController: UIViewController {
 //            initialSpringVelocity: 0.5, options: nil, animations: {
 //            self.dialogView.transform = CGAffineTransformMakeTranslation(0, 0)
 //            }, completion: nil)
-        UIView.animateWithDuration(0.7, delay: 0.0, usingSpringWithDamping: 0.6,
-            initialSpringVelocity: 0.5, options: nil, animations: {
+        UIView.animateWithDuration(0.7, delay: 0.0,  usingSpringWithDamping: 0.6,
+            initialSpringVelocity: 0.5, options: UIViewAnimationOptions.AllowAnimatedContent, animations: { () -> Void in
             let scale = CGAffineTransformMakeScale(1, 1)
             let translate = CGAffineTransformMakeTranslation(0, 0)
             self.dialogView.transform = CGAffineTransformConcat(scale, translate)
-        }, completion: nil)
+            }, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {

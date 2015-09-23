@@ -118,9 +118,10 @@ class RestaurantTableViewController: UITableViewController {
 //        return true
 //    }
 
-    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]? {
+
+    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
         // 分享
-        var shareAction = UITableViewRowAction(style: UITableViewRowActionStyle.Normal, title: "分享") { (action: UITableViewRowAction!, indexPath: NSIndexPath!) -> Void in
+        let shareAction = UITableViewRowAction(style: UITableViewRowActionStyle.Normal, title: "分享") { (action: UITableViewRowAction!, indexPath: NSIndexPath!) -> Void in
             let shareMenu = UIAlertController(title: nil, message: "分享", preferredStyle: UIAlertControllerStyle.ActionSheet)
             let tweetAction = UIAlertAction(title: "Twitter", style: UIAlertActionStyle.Default, handler: nil)
             let facebookAction = UIAlertAction(title: "Facebook", style: UIAlertActionStyle.Default, handler: nil)
@@ -135,7 +136,7 @@ class RestaurantTableViewController: UITableViewController {
         }
         
         // 删除
-        var deleteAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Delete") { (action: UITableViewRowAction!, indexPath: NSIndexPath!) -> Void in
+        let deleteAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Delete") { (action: UITableViewRowAction!, indexPath: NSIndexPath!) -> Void in
             self.restaurants.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }
@@ -179,10 +180,8 @@ class RestaurantTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // 显示详情
         if segue.identifier == "showRestaurantDetail" {
-            if let indexPath = self.tableView.indexPathForSelectedRow() {
-                let destinationController = segue.destinationViewController as? DetailViewController
-                destinationController?.restaurant = self.restaurants[indexPath.row]
-            }
+            let destinationController = segue.destinationViewController as? DetailViewController
+            destinationController?.restaurant = self.restaurants[self.tableView.indexPathForSelectedRow!.row]
         }
     }
 }
