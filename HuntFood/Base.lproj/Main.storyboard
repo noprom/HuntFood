@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="t4B-Pg-OF1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="t4B-Pg-OF1">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -29,8 +30,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="RestraurantCell" rowHeight="80" id="6dT-2a-Pmd" customClass="RestaurantTableViewCell" customModule="HuntFood" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="86" width="320" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6dT-2a-Pmd" id="GjE-l7-nFg">
+                                    <rect key="frame" x="0.0" y="0.0" width="273" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1t1-U7-sE8">
@@ -110,13 +113,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <imageView key="tableHeaderView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="h51-ye-iGw">
-                                    <rect key="frame" x="0.0" y="110" width="320" height="300"/>
+                                    <rect key="frame" x="0.0" y="64" width="320" height="300"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="36" id="U0v-IF-RpQ" customClass="DetailTableViewCell" customModule="HuntFood" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="386" width="320" height="36"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U0v-IF-RpQ" id="AhI-Ja-JiO">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="35.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mms-s2-Q99" userLabel="Field">
@@ -131,11 +136,27 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmh-Tn-wj2">
+                                                    <rect key="frame" x="270" y="3" width="40" height="30"/>
+                                                    <color key="backgroundColor" red="1" green="0.26270267409999998" blue="0.33330195820000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="fz8-0V-Myf"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Map">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="xlh-ct-o9l" kind="push" identifier="showMap" id="ehN-nQ-S1q"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="aJF-Ap-QmE" secondAttribute="bottom" constant="-0.5" id="8Nr-ZZ-jB9"/>
+                                                <constraint firstAttribute="bottom" secondItem="xmh-Tn-wj2" secondAttribute="bottom" constant="2.5" id="Ddz-lJ-8de"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Mms-s2-Q99" secondAttribute="bottom" id="HBV-aD-zgT"/>
+                                                <constraint firstItem="xmh-Tn-wj2" firstAttribute="top" secondItem="AhI-Ja-JiO" secondAttribute="top" constant="2.5" id="Jlq-k7-RTC"/>
                                                 <constraint firstItem="aJF-Ap-QmE" firstAttribute="top" secondItem="AhI-Ja-JiO" secondAttribute="topMargin" id="L5I-0U-mu0"/>
+                                                <constraint firstAttribute="trailing" secondItem="xmh-Tn-wj2" secondAttribute="trailing" constant="10" id="Z84-kD-kdb"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="aJF-Ap-QmE" secondAttribute="trailing" constant="10" id="rJB-BC-wb6"/>
                                                 <constraint firstItem="aJF-Ap-QmE" firstAttribute="leading" secondItem="AhI-Ja-JiO" secondAttribute="leadingMargin" constant="100" id="u1V-NT-fLJ"/>
                                                 <constraint firstItem="Mms-s2-Q99" firstAttribute="leading" secondItem="AhI-Ja-JiO" secondAttribute="leadingMargin" constant="9" id="ukZ-uG-6m5"/>
@@ -190,6 +211,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IvK-47-xSR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1107" y="165"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="n16-Cl-3SB">
+            <objects>
+                <viewController id="xlh-ct-o9l" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Era-P9-O7T"/>
+                        <viewControllerLayoutGuide type="bottom" id="DRc-WG-WKT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Nw9-dl-EWM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aks-Sg-iK4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DRc-WG-WKT" firstAttribute="top" secondItem="aks-Sg-iK4" secondAttribute="bottom" id="Gx2-ph-taC"/>
+                            <constraint firstAttribute="trailing" secondItem="aks-Sg-iK4" secondAttribute="trailing" id="PX5-2s-2Bx"/>
+                            <constraint firstItem="aks-Sg-iK4" firstAttribute="leading" secondItem="Nw9-dl-EWM" secondAttribute="leading" id="WWs-vM-rIp"/>
+                            <constraint firstItem="aks-Sg-iK4" firstAttribute="top" secondItem="Nw9-dl-EWM" secondAttribute="top" id="fAQ-OM-AI3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="O5k-ud-mz9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZfF-88-9wT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1107" y="873"/>
         </scene>
         <!--Review View Controller-->
         <scene sceneID="FS7-JV-uUI">
@@ -309,9 +360,4 @@
         <image name="great" width="50" height="50"/>
         <image name="like" width="50" height="50"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>
