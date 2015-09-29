@@ -165,6 +165,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="fieldLabel" destination="Mms-s2-Q99" id="HEB-Ea-YAG"/>
+                                            <outlet property="mapButton" destination="xmh-Tn-wj2" id="TMq-vH-fpA"/>
                                             <outlet property="valueLabel" destination="aJF-Ap-QmE" id="AQT-yW-vbr"/>
                                         </connections>
                                     </tableViewCell>
@@ -212,10 +213,10 @@
             </objects>
             <point key="canvasLocation" x="1107" y="165"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="n16-Cl-3SB">
             <objects>
-                <viewController id="xlh-ct-o9l" sceneMemberID="viewController">
+                <viewController id="xlh-ct-o9l" customClass="MapViewController" customModule="HuntFood" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Era-P9-O7T"/>
                         <viewControllerLayoutGuide type="bottom" id="DRc-WG-WKT"/>
@@ -237,6 +238,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="O5k-ud-mz9"/>
+                    <connections>
+                        <outlet property="mapView" destination="aks-Sg-iK4" id="rR1-xa-aWl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZfF-88-9wT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
